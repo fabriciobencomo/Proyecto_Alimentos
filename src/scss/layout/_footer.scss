@@ -1,0 +1,17 @@
+.footer{
+    min-height: 8vh;
+    max-height: 8vh;
+    background-color: $blanco;
+
+    .content-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p{  
+            color: $verde;
+            font-weight: $delgada;
+            margin-bottom: 0;
+        }
+    }
+}

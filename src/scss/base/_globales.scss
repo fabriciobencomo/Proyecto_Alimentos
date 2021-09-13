@@ -1,0 +1,83 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+p {
+    font-size: 1.7rem;
+}
+.container {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    margin: math.div($separacion,2) 0;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+    font-weight: $bold;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
+.titulos-span{
+    font-weight: $delgada;
+    display: inline-block;
+    position: relative;
+    color: darken($color: $brown, $amount: 10);
+    font-size: 2.7rem;
+    padding-left: 5.3rem;
+}
+.titulos-span::before, .titulos-span::after{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    background-color: $brown;
+    top: 0.8em;
+}
+.titulos-span::before{
+    left: -7rem;
+}
+
+.e404{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .titulo-404{
+        color: $verde;
+    }
+}

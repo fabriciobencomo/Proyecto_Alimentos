@@ -1,0 +1,22 @@
+@use "sass:math";
+@import 'base/variables';
+@import 'base/normalize';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/botones';
+@import 'base/utilidades';
+
+
+
+// UI
+@import 'layout/header';
+@import 'layout/navegacion';
+@import 'layout/nosotros';
+@import 'layout/productos';
+@import 'layout/testimoniales';
+@import 'layout/contacto';
+@import 'layout/footer';
+
+//Internas
+@import 'internas/administrador';
+@import 'internas/formulario';

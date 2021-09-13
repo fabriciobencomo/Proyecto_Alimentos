@@ -1,0 +1,61 @@
+.info-table{
+    margin: 4rem 0;
+    width: 100%;
+    border-spacing: 0;
+
+
+    thead{
+        background-color: $verde;
+        
+        th{
+            color:$blanco;
+            padding: 2rem;
+        }
+    }
+    td{
+        text-align: center;
+    }
+    tbody tr:nth-child(odd) {
+        background-color: darken($blanco, 10);
+    }
+}
+.titulo-crud{
+    color: $verde;
+}
+
+.administrador{
+    display: flex;
+    margin-top: 5rem;
+
+    .barra-nav{
+        background: $blanco;
+        height: 100vh;
+        margin-top: 4rem;
+    }
+    .active{
+        background-color: darken($color: $blanco, $amount: 1)
+    }
+
+    .crud{
+        flex-grow: 2;
+    }
+
+    h3{
+        color: $brown;
+        margin: 0;
+        padding: 2rem;
+        padding-left: 0;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .option{
+        display: flex;
+
+        svg{
+            justify-self: center;
+            align-self: center;
+            height: 3rem;
+        }
+    }
+}

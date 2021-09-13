@@ -1,0 +1,82 @@
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+    .img-nosotros{
+        width: 100%;
+
+    }
+
+    .nosotros-content{
+        background: $verde;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+    
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        h2{
+            color: $blanco;
+            font-weight: $bold;
+            text-align: end;
+            padding: 1rem 3rem 0 0;
+        }
+
+        span{
+            color: $blanco;
+            padding-right: 2rem;
+        }
+
+        span::after, span::before{
+            background-color: $blanco;
+        }
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            color: $blanco;
+            text-align: justify;
+            padding: 0 3rem;
+        }
+        a{
+            margin: 3rem;
+            text-align: center;
+            
+        }
+    }
+}
+
+
+@include tablet{
+    .nosotros{
+        height: max-content;
+    }
+    .img-nosotros{
+        width: 60%;
+    }
+}
+@include desktop{
+
+    .nosotros{
+        flex-direction: row;
+        height: 70rem;
+        max-height: 70rem;
+        
+        .nosotros-content{
+            margin-top: 5rem;;
+        }
+        .img-nosotros{
+            max-width: 90rem;
+        }
+    }
+
+}

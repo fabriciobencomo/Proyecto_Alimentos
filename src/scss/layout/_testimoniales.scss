@@ -1,0 +1,70 @@
+.testimoniales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    min-height: max-content;
+    margin-bottom: 5rem;
+    background-color: darken($color: $blanco, $amount: 2);
+
+    span{
+        padding-left: 0;
+    }
+    span::after{
+        display: none;
+    }
+    span::before{
+        left: -.5rem;
+        width: 160px;
+        top: 2em
+    }
+    h2{
+        color: $verde;
+    }
+
+    .testimoniales-content{
+        display: flex;
+        row-gap: 5rem;
+        column-gap: 10rem;
+        flex-direction: column;
+
+
+        .testimonial{
+            display: flex;
+            flex-direction: column;
+            background-color: $blanco;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: .1rem.5rem 1.2rem rgba($color: $negro, $alpha: 0.1); 
+            margin-bottom: 3rem;
+        }
+
+        img{
+            display: flex;
+            height: 160px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        p, h3{
+            text-align:justify;
+            padding: 0 2rem;
+            color: darken($color: $brown, $amount: 10);;
+        }
+        h3{
+            align-self: flex-start;
+            color: $brown;
+            font-weight: $bold;
+        }
+    }
+}
+@include tablet{
+    .testimoniales-content{
+        flex-direction: row !important;
+        gap: 5rem;
+    }
+}
+

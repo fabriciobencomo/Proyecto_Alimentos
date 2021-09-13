@@ -1,0 +1,60 @@
+.webp .contacto{
+    background-image: url(../img/contacto.webp);
+}
+
+.contacto{
+    height: max-content;
+    background-repeat: no-repeat;
+    background-color: $negro;
+    background-size: cover;
+    margin-bottom: 0;
+    margin-top: -5rem;
+    display: flex;
+
+    span{
+        margin-top: 5rem;
+        color: $blanco;
+    }
+    span::after, span::before{
+        background-color: $blanco;
+    }
+
+    .formulario{
+        padding: 3rem;
+        height: auto;
+        width: auto;
+        
+        label{
+            color: $blanco;
+            font-weight: $bold;
+            margin-top: 3rem;
+        }
+        input:not([type="submit"]), textarea{
+            margin: .6rem 0 .6rem 0;
+            width: 100%;
+            display: block;
+            background-color: transparent;
+            border: 1px solid $blanco;
+            outline: none;
+            color: $blanco;
+        }
+
+        textarea{
+            height: 10rem;
+        }
+    }
+}
+
+@include tablet{
+    .contacto{
+        background-color: transparent;
+        justify-content: flex-start;
+        opacity: 1;
+
+        .formulario{
+            input:not([type="submit"]), textarea, label{
+                width: 150%;
+            }
+        }
+    }
+}
