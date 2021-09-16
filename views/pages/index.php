@@ -4,16 +4,16 @@
     </div>
     <div class="nosotros-content">
         <div class="container">
-            <span class="titulos-span">Sobre DeaDia</span>
-            <h2>Objetivo</h2>
-            <p>Acompañar a la pequeña, Mediana e Industria en general en el desarrollo de de nuevos proyectos y mejoras para el suministro  y distribución de ingredientes, micro-ingredientes para un aprovechamiento optimo en el proceso de manufactura a bajo costo, excelente calidad y sostenibilidad en el medio ambiente. Nuestro Principal Objetivo es ayudarlos y facilitarles ingredientes de excelente calidad, bajo costo y entrega oportuna</p>
-
+            <span class="titulos-span">About Us</span>
+            <h2>Objetive</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facere ut vero magnam. Aut rem, cupiditate, laborum ullam ab harum et repudiandae asperiores dicta officiis aperiam cum ducimus aliquam consequatur!</p>
+            <a href="#" class="boton-verde">Learn More</a>
         </div>
     </div>
 </div>
 <section class="productos" id="productos">
-    <span class="titulos-span">Explora</span>
-    <h2>Nuestros Productos</h2>
+    <span class="titulos-span">Explore</span>
+    <h2>Our Products</h2>
     <div class="container lista-productos">
         <div class="producto">
             <img src="./build/img/producto1.webp" alt="">
@@ -60,11 +60,10 @@
             </div>
         </div>
     </div>
-    <button class="boton-verde container">Ver Mas</button>
 </section>
 <section class="testimoniales">
-    <span class="titulos-span">Testimonios</span>
-    <h2>Nuestros Clientes</h2>
+    <span class="titulos-span">Testimonials</span>
+    <h2>Our Customers/h2>
     <div class="testimoniales-content container">
         <div class="testimonial">
             <img src="./build/img/testimonio.webp" alt="">
@@ -80,15 +79,15 @@
 </section>
 <section class="contacto" id="contacto">
     <div class="contacto-content">
-        <span class="titulos-span">Contactanos</span>
+        <span class="titulos-span">Contact Us</span>
         <form action="/" method="POST" class="formulario container">
-            <label for="">Nombre Completo</label>
+            <label for="">Full Name</label>
             <input type="text">
-            <label for="">Correo Electronico</label>
+            <label for="">Email</label>
             <input type="text">
-            <label for="">Asunto</label>
+            <label for="">About</label>
             <input type="text">
-            <label for="">Mensaje</label>
+            <label for="">Additional Details</label>
             <textarea name="" id="" cols="30" rows="10"></textarea>
             <input type="submit" class="boton-verde" value="Enviar">
         </form>

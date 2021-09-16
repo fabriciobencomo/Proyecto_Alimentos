@@ -9,6 +9,7 @@
     background-color: darken($color: $blanco, $amount: 2);
 
     span{
+        color: $naranja;
         padding-left: 0;
     }
     span::after{
@@ -17,10 +18,11 @@
     span::before{
         left: -.5rem;
         width: 160px;
-        top: 2em
+        top: 2em;
+        background-color: $naranja;
     }
     h2{
-        color: $verde;
+        color: $negro;
     }
 
     .testimoniales-content{
@@ -52,11 +54,11 @@
         p, h3{
             text-align:justify;
             padding: 0 2rem;
-            color: darken($color: $brown, $amount: 10);;
+            color: $negro;
         }
         h3{
             align-self: flex-start;
-            color: $brown;
+            color: $negro;
             font-weight: $bold;
         }
     }

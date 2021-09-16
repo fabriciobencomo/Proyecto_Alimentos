@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../build/css/app.css">
     <script src="./build/js/scrollreveal.js"></script>
-    <title>Dea Dia</title>
+    <title>Alimentos Page</title>
 </head>
 <body>
 <header class="header <?php echo $inicio ? 'inicio' :  'nav' ?>">
@@ -33,7 +33,7 @@
             <div class="titulo">
                 <?php if($inicio): ?>
                 <?php echo "<span class='ml-0 titulos-span'>Discover your taste</span>" . 
-                "<h1>Eat healthy and <br> Natural Food</h1>" . "";?>
+                "<h1>Eat healthy and <br> Natural Food</h1>" . "<a href='#' class='boton-verde'>Learn More</a>";?>
                 <?php endif; ?>
             </div>
         </div>
@@ -43,7 +43,7 @@
 </body>
 <footer class="footer">
     <div class="content-footer container">
-        <p>&copy; DeaDia | <?php echo date("Y")?> </p>
+        <p>&copy; The Food | <?php echo date("Y")?> </p>
     </div>
 </footer>
 <script src="../build/js/bundle.min.js"></script>

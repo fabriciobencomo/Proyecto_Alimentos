@@ -2,9 +2,17 @@
     display: flex;
     flex-direction: column;
 
+    span{
+        color: $naranja;
+    }
+
+    span::after, span::before{
+        background-color: $negro;
+    }
+
     h2{
         text-align: start;
-        color: $verde;
+        color: $negro;
         margin-left: 1rem;
     }
     .lista-productos{
@@ -46,7 +54,7 @@
                 letter-spacing: 1.3;
                 text-align: center;
                 font-weight: $bold;
-                color: darken($color: $brown, $amount: 20);
+                color: $negro;
             }
 
             

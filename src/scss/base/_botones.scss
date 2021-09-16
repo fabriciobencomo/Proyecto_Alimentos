@@ -2,7 +2,7 @@
     @include boton($brown);
 }
 .boton-verde{
-    @include boton($verde);
+    @include boton($naranja);
 }
 .boton-blanco-verde{
     @include boton($blanco, $verde);
