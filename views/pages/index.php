@@ -5,7 +5,7 @@
     <div class="nosotros-content">
         <div class="container">
             <span class="titulos-span">About Us</span>
-            <h2>Objetive</h2>
+            <h2>Objective</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facere ut vero magnam. Aut rem, cupiditate, laborum ullam ab harum et repudiandae asperiores dicta officiis aperiam cum ducimus aliquam consequatur!</p>
             <a href="#" class="boton-verde">Learn More</a>
         </div>
@@ -63,17 +63,17 @@
 </section>
 <section class="testimoniales">
     <span class="titulos-span">Testimonials</span>
-    <h2>Our Customers/h2>
+    <h2>Our Customers</h2>
     <div class="testimoniales-content container">
         <div class="testimonial">
             <img src="./build/img/testimonio.webp" alt="">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem recusandae eaque, vel aliquam magnam non. Repellat adipisci quae odit natus earum maiores! Consectetur ea sed iusto voluptate! Explicabo, cupiditate adipisci!</p>
-            <h3>Nombre</h3>
+            <h3>Name</h3>
         </div>
         <div class="testimonial">
             <img src="./build/img/testimonio1.webp" alt="">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem recusandae eaque, vel aliquam magnam non. Repellat adipisci quae odit natus earum maiores! Consectetur ea sed iusto voluptate! Explicabo, cupiditate adipisci!</p>
-            <h3>Nombre</h3>
+            <h3>Name</h3>
         </div>
     </div>
 </section>

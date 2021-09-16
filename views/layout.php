@@ -22,11 +22,10 @@
 
                 <div class="derecha">
                     <nav class="navegacion">
-                        <a href="#">Inicio</a>
-                        <a href="#nosotros">Nosotros</a>
-                        <a href="#productos">Productos</a>
-                        <a href="#contacto">Contacto</a>
-                        <a href="/admin">Ingresar</a>
+                        <a href="/#nosotros">About</a>
+                        <a href="/#productos">Products</a>
+                        <a href="/#contacto">Contact</a>
+                        <a href="/admin">Log in</a>
                     </nav>
                 </div>    
             </div> <!--.barra-->
