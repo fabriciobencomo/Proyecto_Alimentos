@@ -9,7 +9,7 @@
         </svg>
         <a href="/admin"><h3>Home</h3></a>
     </div>
-    <div class="option active">
+    <div class="option">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="68" height="68" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2f2838" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <circle cx="12" cy="7" r="4" />
@@ -27,7 +27,7 @@
         </svg>
         <a href="/productos"><h3>Products</h3></a>
     </div>
-    <div class="option">
+    <div class="option active">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" width="68" height="68" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7f5345" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <rect x="7" y="3" width="14" height="14" rx="2" />
@@ -36,40 +36,31 @@
         <a href="/secciones"><h3>Types</h3></a>
     </div>
     </div>
-    <main class="container table">
+    <main class="container">
+        
 
-        <h2 class="titulo-crud">Customers</h2>
-        <a href="/clientes/crear" class="boton-verde">New Order</a>
+        <h2 class="titulo-crud">Type</h2>
+        <a href="/tipos/crear" class="boton-verde">New Product Type</a>
             <table class="info-table">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Order</th>
-                        <th>Price</th>
-                        <th>Email</th>
-                        <th>Date</th>
-                        <th>Created</th>
-                        <th>Actions</th>
+                        <th>Img</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($clientes as $cliente): ?>
+                    <?php foreach($tipos as $tipo): ?>
                     <tr>
-                        <td><?php echo $cliente->id; ?></td>
-                        <td><?php echo $cliente->nombre; ?></td>
-                        <td><?php echo $cliente->pedido; ?></</td>
-                        <td><?php echo $cliente->precio; ?></td>
-                        <td><?php echo $cliente->email; ?></td>
-                        <td><?php echo $cliente->fecha; ?></td>
-                        <td><?php echo $cliente->creado; ?></td>
+                        <td><?php echo $tipo->id; ?></td>
+                        <td><?php echo $tipo->nombre; ?></td>
+                        <<td><img class="imagen-tabla" src="/imagenes/<?php echo $tipo->imagen; ?>" alt="type"></td>
                         <td>
-                        <form method="POST" class="w-100" action="/clientes">
-                            <input type="hidden" name="id" value="<?php echo $cliente->id?>">
-                            <input type="hidden" name="tipo" value="cliente">
+                        <form method="POST" class="w-100" action="/clientes/eliminar">
+                            <input type="hidden" name="id" value="<?php echo $tipo->id?>">
                             <input type="submit" class="boton-rojo-block" value="Delete">
                         </form>
-                        <a href="/clientes/actualizar?id=<?php echo $cliente->id?>" class="boton-blanco">Update</a>
+                        <a href="/tipos/actualizar?id=<?php echo $tipo->id?>" class="boton-amarillo-block">Update</a>
                         </td>
                     </tr>
                     <?php endforeach; ?>

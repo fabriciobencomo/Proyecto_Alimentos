@@ -12,8 +12,4 @@ class PageController{
         ]);
     }
 
-    public static function nosotros(Router $router){
-
-        $router->render('pages/nosotros');
-    }
 }

@@ -15,8 +15,12 @@
     td{
         text-align: center;
     }
+    tbody tr{
+        background-color: $negro;
+        color: $blanco;
+    }
     tbody tr:nth-child(odd) {
-        background-color: darken($blanco, 10);
+        background-color: lighten($negro, 10);
     }
 }
 .titulo-crud{

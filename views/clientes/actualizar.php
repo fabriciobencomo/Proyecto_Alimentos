@@ -1,6 +1,6 @@
 <main class="container crud">
-    <h2 class="titulo-form">Actualizar Pedido</h2>
-    <a href="/admin" class="boton-verde">Volver</a>
+    <h2 class="titulo-form">Update Order</h2>
+    <a href="/admin" class="boton-verde">Back</a>
 
     <?php foreach($errores as $error): ?>
     <div class="alerta error">
@@ -8,8 +8,8 @@
     </div>
     <?php endforeach; ?>
 
-    <form action="/clientes/actualizar" method="POST" class="form container">
+    <form method="POST" class="form container">
         <?php include __DIR__ . "/formulario.php"; ?>
-        <input type="submit" value="Guardar Cambios" class="boton-verde">
+        <input type="submit" value="Save Changes" class="boton-verde">
     </form>
 </main>

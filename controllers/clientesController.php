@@ -36,7 +36,7 @@ class clientesController {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            $cliente = new clientes($_POST);
+            $cliente = new clientes($_POST['cliente']);
 
 
             $errores = $cliente->validar();
@@ -77,5 +77,16 @@ class clientesController {
             'errores' => $errores
         ]);
     }
+
+    public static function delete(){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $id = $_POST['id'];
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+            if($id){
+                $cliente = clientes::find($id);
+                $cliente->Delete();
+            }
+        }
+    }   
     
 }

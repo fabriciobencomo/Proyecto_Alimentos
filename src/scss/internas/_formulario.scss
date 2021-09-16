@@ -1,6 +1,7 @@
 .form{
-    width: 50%;
+    width: 100%;
     background: $blanco;
+    margin-top: 5rem;
 
     label, input, textarea{
         display: block;
@@ -11,14 +12,20 @@
     }
 }
 
+@include tablet{
+    .form{
+        width: 50%;
+    }
+}
+
 .crud{
     margin-top: 4rem;
     .titulo-form{
         padding-top: 3rem;
-        color: $verde;
+        color: $negro;
     }
     
     a{
-        align-self: center;
+        text-align: center;
     }
 }

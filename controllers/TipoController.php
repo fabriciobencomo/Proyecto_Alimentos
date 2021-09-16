@@ -3,7 +3,7 @@
 namespace Controllers;
 
 
-use Model\productos;
+use Model\secciones;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
 
@@ -11,29 +11,22 @@ class productosController {
 
     public static function admin(Router $router){
 
-        $productos = productos::all();
+        $secciones = secciones::all();
 
-        $router->render("productos/datos", [
-            'productos' => $productos
+        $router->render("tipos/datos", [
+            'secciones' => $secciones
         ]);
     }
 
 
     public static function create(Router $router){
-        $producto = new productos();
+        $seccion = new secciones();
 
-        $errores = productos::getErrores();
+        $errores = secciones::getErrores();
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            $producto = new productos($_POST['producto']);
-
-            if($producto->cantidad >= 1){
-                $producto->disponibilidad = true;
-            }
-            else{
-                $producto->disponibilidad = false;
-            }
+            $seccion = new secciones($_POST['seccion']);
 
             if(!is_dir(CARPETA_IMG)){
         
@@ -42,52 +35,52 @@ class productosController {
         
             $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
         
-            if($_FILES['producto']['tmp_name']['imagen']){
-                $image = Image::make($_FILES['producto']['tmp_name']['imagen'])->fit(800,600);
-                $producto->setImg($nombreImagen);
+            if($_FILES['seccion']['tmp_name']['imagen']){
+                $image = Image::make($_FILES['seccion']['tmp_name']['imagen'])->fit(467,262);
+                $seccion->setImg($nombreImagen);
             }
         
 
-            $errores = $producto->validar();
+            $errores = $seccion->validar();
         
             if(empty($errores)){
                 $image->save(CARPETA_IMG . $nombreImagen);
-                $producto->Save();
+                $seccion->Save();
             }
             
         }
 
-        $router->render("productos/crear", [
-            'producto' => $producto,
+        $router->render("tipos/crear", [
+            'seccion' => $seccion,
             'errores' => $errores
         ]);
     }
 
     public static function update(Router $router){
 
-        $id = redirectOrValidate('/propiedades/admin');
-        $producto = productos::find($id);
-        $errores = productos::getErrores();
+        $id = redirectOrValidate('/tipos/admin');
+        $seccion = secciones::find($id);
+        $errores = secciones::getErrores();
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
             //Lleanmos el array
-            $args = $_POST['producto'];
+            $args = $_POST['seccion'];
         
             //Sincronizamos los datos 
-            $producto->sync($args);
+            $seccion->sync($args);
 
         
             //Validamos si hay errores
-            $errores = $producto->validar();
+            $errores = $seccion->validar();
         
             //Genera nombre random
             $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
         
             //Subimos Imagen
            
-            if($_FILES['producto']['tmp_name']['imagen']){
-                $image = Image::make($_FILES['producto']['tmp_name']['imagen'])->fit(800,600);
-                $producto->setImg($nombreImagen);
+            if($_FILES['seccion']['tmp_name']['imagen']){
+                $image = Image::make($_FILES['seccion']['tmp_name']['imagen'])->fit(800,600);
+                $seccion->setImg($nombreImagen);
             }
         
            if(empty($errores)){
@@ -96,13 +89,13 @@ class productosController {
                 $image->save(CARPETA_IMG . $nombreImagen);
             }
         
-            $producto->Save();
+            $seccion->Save();
         
             } 
         }
 
-        $router->render("productos/actualizar", [
-            'producto' => $producto,
+        $router->render("tipos/actualizar", [
+            'seccion' => $seccion,
             'errores' => $errores
         ]);
 
@@ -113,8 +106,8 @@ class productosController {
             $id = $_POST['id'];
             $id = filter_var($id, FILTER_VALIDATE_INT);
             if($id){
-                $producto = productos::find($id);
-                $producto->Delete();
+                $seccion = secciones::find($id);
+                $seccion->Delete();
             }
         }
     }   

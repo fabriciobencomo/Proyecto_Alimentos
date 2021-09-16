@@ -47,12 +47,12 @@ class ActiveRecord {
 
         $stringValues = join(',', $values);
 
-        $query = "UPDATE " . static::$tabla . " SET " . $stringValues . "WHERE id = " . self::$db->escape_string($this->id) . " LIMIT 1"; 
+        $query = "UPDATE " . static::$tabla .  " SET " . $stringValues . "WHERE id = '" . self::$db->escape_string($this->id) . "' LIMIT 1;";
 
         $resultado = self::$db->query($query);
 
         if($resultado){
-            header("Location: /");
+            header("Location: /admin");
         }
         
 
@@ -63,7 +63,7 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
 
         if($resultado){
-            header("Location: /");
+            header("Location: /admin");
         }
     }
 
