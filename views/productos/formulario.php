@@ -15,7 +15,7 @@
     <input type="number" id="cantidad" name="producto[cantidad]" min="0" max="99" value="<?php echo s($producto->cantidad); ?>">
 
     <label for="tipo">Product Type</label>
-    <select name="propiedad[vendedorId]" id="tipo">
+    <select name="producto[tipoId]" id="tipo">
                 <option value="" disabled selected>----Select-----</option>
                 <?php foreach($tipos as $tipo): ?>
                     <option <?php echo $producto->tipoId === $tipo->id ? 'selected' : ''; ?> value="<?php echo s($tipo->id)?>"> <?php echo s($tipo->nombre)?> </option>

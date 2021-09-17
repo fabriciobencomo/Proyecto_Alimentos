@@ -4,6 +4,7 @@ require __DIR__ . "/../includes/app.php";
 use MVC\Router;
 
 use Controllers\clientesController;
+use Controllers\TipoController;
 use Controllers\productosController;
 use Controllers\PageController;
 
@@ -13,6 +14,7 @@ $router = new Router();
 //-----PAGES-----
 $router->get('/', [PageController::class,'index']);
 $router->post('/', [PageController::class,'index']);
+$router->get('/Productos', [PageController::class,'productos']);
 
 
 //----AUTH------
@@ -35,7 +37,6 @@ $router->post('/productos/actualizar', [productosController::class,'update']);
 
 
 //------TIPO DE PRODUCTOS-----
-//----PRODUCTOS------
 $router->get('/tipos', [TipoController::class,'admin']);
 $router->post('/tipos', [TipoController::class,'delete']);
 $router->get('/tipos/crear', [TipoController::class,'create']);

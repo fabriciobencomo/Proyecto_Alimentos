@@ -21,7 +21,7 @@ class productos extends ActiveRecord{
         
         $this->id = $args['id'] ?? null;
         $this->nombre = $args['nombre'] ?? '';
-        $this->disponibilidad = $args['disponibilidad'] ?? '';
+        $this->disponibilidad = $args['disponibilidad'] ?? 0;
         $this->precio = $args['precio'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';

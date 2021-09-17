@@ -6,6 +6,7 @@ namespace Controllers;
 use Model\productos;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
+use Model\secciones;
 
 class productosController {
 
@@ -21,7 +22,7 @@ class productosController {
 
     public static function create(Router $router){
         $producto = new productos();
-
+        $tipos = secciones::all();
         $errores = productos::getErrores();
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -51,15 +52,24 @@ class productosController {
             $errores = $producto->validar();
         
             if(empty($errores)){
-                $image->save(CARPETA_IMG . $nombreImagen);
-                $producto->Save();
+                $resultado = $producto->Save();
+
+                debug($resultado);
+
+                if($resultado){
+                    $image->save(CARPETA_IMG . $nombreImagen);
+                }
+                else{
+                    echo "Todo mal";
+                }
             }
             
         }
 
         $router->render("productos/crear", [
             'producto' => $producto,
-            'errores' => $errores
+            'errores' => $errores,
+            'tipos' => $tipos
         ]);
     }
 
@@ -67,6 +77,7 @@ class productosController {
 
         $id = redirectOrValidate('/propiedades/admin');
         $producto = productos::find($id);
+        $tipos = secciones::all();
         $errores = productos::getErrores();
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -75,6 +86,13 @@ class productosController {
         
             //Sincronizamos los datos 
             $producto->sync($args);
+
+            if($producto->cantidad >= 1){
+                $producto->disponibilidad = 1;
+            }
+            else{
+                $producto->disponibilidad = 0;
+            }
 
         
             //Validamos si hay errores
@@ -103,7 +121,8 @@ class productosController {
 
         $router->render("productos/actualizar", [
             'producto' => $producto,
-            'errores' => $errores
+            'errores' => $errores,
+            'tipos' => $tipos
         ]);
 
     }

@@ -4,6 +4,15 @@
 .boton-verde{
     @include boton($naranja);
 }
+.boton-blanco{
+    @include boton($naranja);
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
+}
+.boton-rojo-block{
+    margin-bottom: 1rem;
+    @include boton($rojo);
+}
 .boton-blanco-verde{
     @include boton($blanco, $verde);
 }

@@ -15,50 +15,15 @@
     <span class="titulos-span">Explore</span>
     <h2>Our Products</h2>
     <div class="container lista-productos">
-        <div class="producto">
-            <img src="./build/img/producto1.webp" alt="">
-            <div class="content-producto">
-                <h3>Bebidas Gaseoesas</h3>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="producto">
-            <img src="./build/img/producto2.webp" alt="">
-            <div class="content-producto">
-                <h3>Edulcorantes</h3>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="producto">
-            <img src="/build/img/producto3.webp" alt="">
-            <div class="content-producto">
-                <h3>Condimentos</h3>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="producto">
-            <img src="./build/img/producto4.webp" alt="">
-            <div class="content-producto">
-                <div>
-                    <h3>Helados</h3>
+        <?php foreach($tipos as $tipo): ?>
+            <div class="producto">
+                <img src="./imagenes/<?php echo $tipo->imagen;?>" alt="Producto">
+                <div class="content-producto">
+                    <h3><?php echo $tipo->nombre ?></h3>
+                    <a href="Productos?id=<?php echo $tipo->id?>" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
                 </div>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
             </div>
-        </div>
-        <div class="producto">
-            <img src="./build/img/producto5.webp" alt="">
-            <div class="content-producto">
-                <h3>Panaderia</h3>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="producto">
-            <img src="./build/img/producto6.webp" alt="">
-            <div class="content-producto">
-                <h3>Harinas</h3>
-                <a href="" class="boton-verde"><img src="./build/img/lupa.svg" alt=""></a>
-            </div>
-        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 <section class="testimoniales">

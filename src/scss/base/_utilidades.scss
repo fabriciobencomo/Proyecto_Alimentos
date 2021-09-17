@@ -14,6 +14,12 @@
 .contenido-centrado {
     max-width: 80rem;
 }
-.imagen-tabla{
-    width: 10rem;
+
+td{
+    .imagen-tabla{
+        width: 10rem;
+        align-self: center;
+        justify-self: center;
+    }
 }
+

@@ -25,15 +25,15 @@
         <path d="M17 17h-11v-14h-2" />
         <path d="M6 5l14 1l-1 7h-13" />
         </svg>
-        <a href="/productos"><h3>Productos</h3></a>
+        <a href="/productos"><h3>Products</h3></a>
     </div>
     <div class="option">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" width="68" height="68" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7f5345" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-box-multiple" width="68" height="68" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2f2838" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <rect x="7" y="3" width="14" height="14" rx="2" />
         <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h2" />
         </svg>
-        <a href="/secciones"><h3>Types</h3></a>
+        <a href="/tipos"><h3>Types</h3></a>
     </div>
 </div>
 <main class="crud">

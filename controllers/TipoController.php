@@ -7,7 +7,7 @@ use Model\secciones;
 use MVC\Router;
 use Intervention\Image\ImageManagerStatic as Image;
 
-class productosController {
+class TipoController {
 
     public static function admin(Router $router){
 
