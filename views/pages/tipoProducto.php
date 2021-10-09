@@ -10,7 +10,7 @@
             <ul>
                 <?php foreach($productos as $producto):?>
                     <?php if($producto->tipoId === $seccion->id): ?>
-                        <a href="/productos-item"><li><?php echo $producto->nombre?></li></a>
+                        <li class="item-list"><?php echo $producto->nombre?></li>
                     <?php endif; ?>
                 <?php endforeach;?>
             </ul>

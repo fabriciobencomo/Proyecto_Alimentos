@@ -17,5 +17,9 @@
             "MVC\\": "./",
             "Controllers\\": "./controllers"
         }
+    },
+    "scripts": {
+        "public": "cd public",
+        "start": "php -S localhost:3000"
     }
 }

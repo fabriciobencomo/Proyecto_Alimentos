@@ -42,10 +42,10 @@ class TipoController {
         
 
             $errores = $seccion->validar();
-        
+            
             if(empty($errores)){
                 $image->save(CARPETA_IMG . $nombreImagen);
-                $seccion->Save();
+                debug($seccion->Save());
             }
             
         }

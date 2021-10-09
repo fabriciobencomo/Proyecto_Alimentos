@@ -23,3 +23,19 @@ td{
     }
 }
 
+.mensaje-exito{
+    background-color: $naranja;
+    padding: 1rem 1.2rem;
+    color: $blanco;
+    width: fit-content;
+    font-weight: $bold;
+}
+
+.alert{
+    margin-bottom: 3rem;
+}
+
+.display-none{
+    display: none;
+}
+

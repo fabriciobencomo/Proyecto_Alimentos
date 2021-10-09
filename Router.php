@@ -16,11 +16,6 @@ class Router {
     }
 
     public function comporbarRutas(){
-        session_start();
-
-        $auth = $_SESSION['login'] ?? null;
-
-        $routeAdmin = [];
 
         $url = $_SERVER['PATH_INFO'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'];
@@ -30,10 +25,6 @@ class Router {
         }else{
             $fn = $this->routePOST[$url] ?? null;
         } 
-
-        if(in_array($url, $routeAdmin) && !$auth){
-            header('Location: /');
-        }
 
         if($fn){
             call_user_func($fn, $this);

@@ -1,9 +1,9 @@
 <main class="container crud">
     <h2 class="titulo-form">New Produt Type</h2>
-    <a href="/admin" class="boton-verde">Back</a>
+    <a href="/tipos" class="boton-verde">Back</a>
 
     <?php foreach($errores as $error): ?>
-    <div class="alerta error">
+    <div class="alerta error boton-blanco">
         <?php echo $error; ?>
     </div>
     <?php endforeach; ?>

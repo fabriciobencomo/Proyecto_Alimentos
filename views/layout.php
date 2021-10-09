@@ -25,14 +25,20 @@
                         <a href="/#nosotros">About</a>
                         <a href="/#productos">Products</a>
                         <a href="/#contacto">Contact</a>
-                        <a href="/admin">Log in</a>
+                        <a href="/clientes">Crud</a>
                     </nav>
                 </div>    
             </div> <!--.barra-->
             <div class="titulo">
+                <?php if($mensaje ?? null):?>
+                    <div class="alert">
+                        <span class="mensaje-exito">Your Message Was Send</span>
+                    </div>
+                <?php endif;?>
                 <?php if($inicio): ?>
-                <?php echo "<span class='ml-0 titulos-span'>Discover your taste</span>" . 
-                "<h1>Eat healthy and <br> Natural Food</h1>" . "<a href='#' class='boton-verde'>Learn More</a>";?>
+                <?php echo
+                "<span class='ml-0 titulos-span'>Discover your taste</span>" . 
+                "<h1>Eat healthy and <br> Natural Food</h1>" . "<a href='#' class='boton-verde'>Learn More</a>"?>
                 <?php endif; ?>
             </div>
         </div>

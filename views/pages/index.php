@@ -47,13 +47,13 @@
         <span class="titulos-span">Contact Us</span>
         <form action="/" method="POST" class="formulario container">
             <label for="">Full Name</label>
-            <input type="text">
+            <input type="text" name="respuestas[nombre]" required>
             <label for="">Email</label>
-            <input type="text">
+            <input type="mail" name="respuestas[mail]" required>
             <label for="">About</label>
-            <input type="text">
+            <input type="text" name="respuestas[asunto]" required>
             <label for="">Additional Details</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="respuestas[extra]" id="" cols="30" rows="10"></textarea>
             <input type="submit" class="boton-verde" value="Enviar">
         </form>
     </div>

@@ -29,18 +29,11 @@ class productosController {
 
             $producto = new productos($_POST['producto']);
 
-            if($producto->cantidad >= 1){
-                $producto->disponibilidad = true;
-            }
-            else{
-                $producto->disponibilidad = false;
-            }
-
             if(!is_dir(CARPETA_IMG)){
         
                 mkdir(CARPETA_IMG);
             }
-        
+
             $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
         
             if($_FILES['producto']['tmp_name']['imagen']){
@@ -52,16 +45,10 @@ class productosController {
             $errores = $producto->validar();
         
             if(empty($errores)){
-                $resultado = $producto->Save();
 
-                debug($resultado);
+                $image->save(CARPETA_IMG . $nombreImagen);
+                $producto->Save();  
 
-                if($resultado){
-                    $image->save(CARPETA_IMG . $nombreImagen);
-                }
-                else{
-                    echo "Todo mal";
-                }
             }
             
         }
@@ -86,14 +73,6 @@ class productosController {
         
             //Sincronizamos los datos 
             $producto->sync($args);
-
-            if($producto->cantidad >= 1){
-                $producto->disponibilidad = 1;
-            }
-            else{
-                $producto->disponibilidad = 0;
-            }
-
         
             //Validamos si hay errores
             $errores = $producto->validar();

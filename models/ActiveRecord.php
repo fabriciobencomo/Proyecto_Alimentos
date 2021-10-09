@@ -34,7 +34,7 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
 
         if($resultado){
-            header("Location: /admin");
+            header("Location: /clientes");
         }
     }
     public function update(){
@@ -52,7 +52,7 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
 
         if($resultado){
-            header("Location: /admin");
+            header("Location: /clientes");
         }
         
 
@@ -63,7 +63,7 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
 
         if($resultado){
-            header("Location: /admin");
+            header("Location: /clientes");
         }
     }
 

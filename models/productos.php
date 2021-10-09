@@ -6,11 +6,10 @@ class productos extends ActiveRecord{
 
     protected static $tabla = 'Productos';
 
-    protected static $columnasDB = ['id', 'nombre', 'disponibilidad', 'precio', 'imagen', 'descripcion', 'cantidad' , 'tipoId'];
+    protected static $columnasDB = ['id', 'nombre', 'precio', 'imagen', 'descripcion', 'cantidad' , 'tipoId'];
 
     public $id;
     public $nombre;
-    public $disponibilidad;
     public $precio;
     public $imagen;
     public $descripcion;
@@ -18,10 +17,8 @@ class productos extends ActiveRecord{
     public $tipoId;
 
     public function __construct($args = []){
-        
-        $this->id = $args['id'] ?? null;
+    
         $this->nombre = $args['nombre'] ?? '';
-        $this->disponibilidad = $args['disponibilidad'] ?? 0;
         $this->precio = $args['precio'] ?? '';
         $this->imagen = $args['imagen'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
@@ -34,10 +31,6 @@ class productos extends ActiveRecord{
     public function validar(){
         if(!$this->nombre){
             self::$errores[] = 'Debes añadir un Nombre';
-        }
-    
-        if(!$this->disponibilidad){
-            self::$errores[] = 'Debes especificar su dispoinibilidad';
         }
     
         if(!$this->imagen){
