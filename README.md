@@ -1,8 +1,6 @@
-#The Food
+# The Food
 
-Pagina Web que brinda Informacion sobre Domicilios en Venta, Esta construida con la Arquitectura MVC permitiendo que el proyecto sea facil de modificar sin afectar
-otros componentes. El proyecto se divide en rutas de acceso publico y privadas (para el administrador) donde Contiene un crud para tener un control
-de los departamentos, clientes y vendedores.
+The Food is a website focused on the wholesale of chemicals and raw materials for food. It's a CRUD you can admin clients and products. The stack for this project was: HTML, SASS, Javascript, PHP and MySql
 
 # Pre-Requisites :computer:
 
@@ -29,5 +27,5 @@ de los departamentos, clientes y vendedores.
 
 - Fabricio Bencomo
 
-#Website :eyes:
+# Website :eyes:
 
